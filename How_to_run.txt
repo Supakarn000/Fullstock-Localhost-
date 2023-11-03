@@ -1,0 +1,13 @@
+Start Frontend
+1. cd client
+2.npm run dev
+3.Frontend will run on localhost:3000 (port 3000)
+
+Start Backend (api)
+1. cd backend
+2. nodemon start OR npm start
+3.Backend will run on localhost:8000 (port 8000)
+
+Have 2 Option to use database (MySql)
+1. Xampp
+2. Clound database (MySql)
