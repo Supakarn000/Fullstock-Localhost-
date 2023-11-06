@@ -209,7 +209,7 @@ router.put("/update/:id", (req, res) => {
 
     db.query(q, values, (err, data) => {
         if (err) {
-            return res.status(500).json(err);
+            return err;
         }
         return res.status(200).json("Product updated");
     });

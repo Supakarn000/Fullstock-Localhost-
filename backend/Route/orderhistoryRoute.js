@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
     const userId = req.headers.authorization;
 
     if (!userId) {
-        return res.status(401).json({ error: 'Authorization token not provided' });
+        return res.status(404)
     }
     const userID = userId;
 
@@ -26,8 +26,7 @@ router.get('/', (req, res) => {
 
     db.query(selectOrdersQuery, [userID], (err, results) => {
         if (err) {
-            console.error('Error fetching order history:', err);
-            res.status(500).json({ error: 'Internal server error' });
+            res.status(500)
         } else {
             res.status(200).json(results);
         }

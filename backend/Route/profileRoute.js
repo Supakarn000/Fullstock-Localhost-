@@ -19,17 +19,14 @@ const router = express.Router();
   router.get('/', (req, res) => {
     const userId = req.headers.authorization;
 
-    // console.log('User ID:', userId);
-
     db.query('SELECT * FROM users WHERE userID = ?', [userId], (err, results) => {
 
         if (err) {
-            console.error('Error fetching user data:', err);
-            return res.status(500).json({ message: 'Internal Server Error' });
+            return err
         }
 
         if (results.length === 0) {
-            return res.status(404).json({ message: 'User not found' });
+            return res.status(404)
         }
 
         const userData = results[0];
@@ -52,13 +49,12 @@ router.put("/address", (req, res) => {
 
   db.query(q, values, (err, result) => {
       if (err) {
-          console.error(err);
-          return res.status(500).json({ error: "Failed to update address" });
+          return err
       }
       if (result.affectedRows > 0) {
-          return res.status(200).json({ message: 'Address updated successfully' });
+          return res.status(200)
       } else {
-          return res.status(404).json({ error: "User not found" });
+          return res.status(404)
       }
   });
 });

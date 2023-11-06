@@ -35,7 +35,7 @@ router.post("/", (req, res) => {
         db.query(q, values, (insertErr, insertResult) => {
             if (insertErr) {
                 console.error("Error inserting user: " + insertErr);
-                return res.status(500).json({ error: "Failed to register user" });
+                return res.status(500).json({ error });
             }
             console.log("User registered successfully");
             res.status(200).json({ message: "User registered successfully" });
@@ -46,24 +46,24 @@ router.post("/", (req, res) => {
         db.query("SELECT * FROM users WHERE email = ?", [email], (selectEmailErr, selectEmailData) => {
             if (selectEmailErr) {
                 console.error("Error checking email: " + selectEmailErr);
-                return res.status(500).json({ error: "Failed to check email" });
+                return res.status(500).json({ error });
             }
             if (selectEmailData.length > 0) {
-                return res.status(400).json({ error: "Email already in use" });
+                return res.status(400).json({ error });
             }
             db.query("SELECT * FROM users WHERE username = ?", [username], (selectUsernameErr, selectUsernameData) => {
                 if (selectUsernameErr) {
                     console.error("Error checking username: " + selectUsernameErr);
-                    return res.status(500).json({ error: "Failed to check username" });
+                    return res.status(500).json({ error });
                 }
                 if (selectUsernameData.length > 0) {
-                    return res.status(400).json({ error: "Username already in use" });
+                    return res.status(400).json({ error });
                 }
                 insertSingleUser(username, email, password, res);
             });
         });
     } else {
-        res.status(400).json({ error: "Invalid data format" });
+        res.status(400).json({ error });
     }
 });
 

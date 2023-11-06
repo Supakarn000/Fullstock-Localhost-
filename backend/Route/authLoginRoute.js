@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
     db.query("SELECT * FROM users WHERE username = ?", [username], (selectErr, selectData) => {
         if (selectErr) {
             console.error("Error checking username: " + selectErr);
-            return res.status(500).json({ error: "Failed to check username" });
+            return res.status(500).json({ error: "" });
         }
         if (selectData.length === 0) {
             return res.status(401).json({ error: "Username not found" });
@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
         const isAdmin = selectData[0].isAdmin;
 
         if (password !== storedPassword) {
-            return res.status(401).json({ error: "Incorrect password" });
+            return res.status(401)
         }
         const userId = selectData[0].userID;
 
@@ -55,7 +55,7 @@ router.post("/", (req, res) => {
         const updateTimestampQuery = "UPDATE users SET last_login = NOW() WHERE userID = ?";
         db.query(updateTimestampQuery, [userId], (updateErr) => {
             if (updateErr) {
-                return res.status(500).json({ error: "Failed to update login timestamp" });
+                return err
             }
 
             return res.status(200).json({ message: "Login successful", userId, isAdmin });
