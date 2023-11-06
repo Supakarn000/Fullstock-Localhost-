@@ -191,4 +191,28 @@ router.get("/search", (req, res) => {
     });
 });
 
+router.put("/update/:id", (req, res) => {
+    const productId = req.params.id;
+    const updatedProduct = req.body;
+
+    const q = "UPDATE products SET name = ?, image = ?, description = ?, type = ?, price = ?, instock = ? WHERE productID = ?";
+
+    const values = [
+        updatedProduct.name,
+        updatedProduct.image,
+        updatedProduct.description,
+        updatedProduct.type,
+        updatedProduct.price,
+        updatedProduct.instock,
+        productId
+    ];
+
+    db.query(q, values, (err, data) => {
+        if (err) {
+            return res.status(500).json(err);
+        }
+        return res.status(200).json("Product updated");
+    });
+});
+
 export default router;
