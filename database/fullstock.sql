@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2023 at 03:00 PM
+-- Generation Time: Nov 06, 2023 at 07:33 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -110,7 +110,8 @@ INSERT INTO `orders` (`orderID`, `userID`, `cartItems`, `orderDate`, `totalPrice
 (82, 1, '[{\"productID\":39,\"name\":\"Uniqlo Slim Fit Chino Pants\",\"image\":\"https://image.uniqlo.com/UQ/ST3/th/imagesgoods/450251/item/thgoods_09_450251.jpg?width=750\",\"description\":\"Uniqlo Slim Fit Chino Pants\",\"type\":\"pants\",\"price\":1800,\"instock\":18,\"created_at\":\"2023-09-21T05:11:23.000Z\",\"updated_at\":\"2023-10-14T00:43:25.000Z\",\"sold\":0}]', '2023-10-14 09:07:30', '1800.00', 0),
 (83, 1, '[{\"productID\":4,\"name\":\"Air Jordan 1 Zoom CMFT 2\",\"image\":\"https://media.discordapp.net/attachments/459354486469689347/1059516649532821504/image.png\",\"description\":\"Air Jordan 1 Zoom CMFT 2\",\"type\":\"shoes\",\"price\":5500,\"instock\":20,\"created_at\":\"2023-09-19T14:41:04.000Z\",\"updated_at\":\"2023-10-14T07:43:25.000Z\",\"sold\":5}]', '2023-10-14 02:26:29', '5500.00', 0),
 (84, 1, '[{\"productID\":59,\"name\":\"Tom Ford FT0712 Square Sunglasses\",\"image\":\"https://www.designerframesoutlet.com/images/thumbs/0777369_tom-ford-sunglasses-ft0712-d_550.jpeg\",\"description\":\"Tom Ford FT0712 Square Sunglasses\",\"type\":\"other\",\"price\":3900,\"instock\":12,\"created_at\":\"2023-09-21T12:13:28.000Z\",\"updated_at\":\"2023-10-14T07:43:25.000Z\",\"sold\":0}]', '2023-10-14 02:28:02', '3900.00', 0),
-(85, 1, '[{\"productID\":3,\"name\":\"Nike Dunk Low By You\",\"image\":\"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9b26aa8f-0173-409b-b30a-7ce2d88573a4/custom-nike-dunk-low-by-you.png\",\"description\":\"Dunk Low By You!!!\",\"type\":\"shoes\",\"price\":5200,\"instock\":19,\"created_at\":\"2023-09-19T14:41:04.000Z\",\"updated_at\":\"2023-10-14T09:03:00.000Z\",\"sold\":2}]', '2023-10-14 02:29:37', '5200.00', 0);
+(85, 1, '[{\"productID\":3,\"name\":\"Nike Dunk Low By You\",\"image\":\"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9b26aa8f-0173-409b-b30a-7ce2d88573a4/custom-nike-dunk-low-by-you.png\",\"description\":\"Dunk Low By You!!!\",\"type\":\"shoes\",\"price\":5200,\"instock\":19,\"created_at\":\"2023-09-19T14:41:04.000Z\",\"updated_at\":\"2023-10-14T09:03:00.000Z\",\"sold\":2}]', '2023-10-14 02:29:37', '5200.00', 0),
+(92, 1, '[{\"productID\":52,\"name\":\"Coach Signature Mini Backpack\",\"image\":\"https://thailand.coach.com/media/catalog/product/3/0/306ef348b043cb50c14fd0d8f819035725a6e32443759253ecde54a463284351.jpeg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700\",\"description\":\"Coach Signature Mini Backpack\",\"type\":\"other\",\"price\":2200,\"instock\":10,\"created_at\":\"2023-09-21T12:13:23.000Z\",\"updated_at\":\"2023-10-29T13:59:49.000Z\",\"sold\":0}]', '2023-10-30 09:50:15', '2200.00', 0);
 
 -- --------------------------------------------------------
 
@@ -138,7 +139,7 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`productID`, `name`, `image`, `description`, `type`, `price`, `instock`, `created_at`, `updated_at`, `sold`) VALUES
 (2, 'Nike Dunk Low SE Lottery Pack Grey Fog', 'https://d2cva83hdk3bwc.cloudfront.net/nike-dunk-low-se-lottery-pack-grey-fog-2.jpg', 'The Best Nike Dunk low EVER', 'shoes', 3500, 10, '2023-09-19 14:41:04', '2023-10-29 13:59:49', 1),
 (3, 'Nike Dunk Low By You', 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9b26aa8f-0173-409b-b30a-7ce2d88573a4/custom-nike-dunk-low-by-you.png', 'Dunk Low By You!!!', 'shoes', 5200, 10, '2023-09-19 14:41:04', '2023-10-29 13:59:49', 50),
-(4, 'Air Jordan 1 Zoom CMFT 2', 'https://media.discordapp.net/attachments/459354486469689347/1059516649532821504/image.png', 'Air Jordan 1 Zoom CMFT 2', 'shoes', 5500, 10, '2023-09-19 14:41:04', '2023-10-29 13:59:49', 1),
+(4, 'Air Jordan 1 Zoom CMFT 2', 'https://szopex.blob.core.windows.net/shops/media/f1000/2023/jordan/220748/jordan-brand-air-jordan-1-zoom-air-cmft-2-wmns-ore-black-dv1305-001-64fef9b41b411.jpg', 'Air Jordan 1 Zoom CMFT 2', 'shoes', 5500, 10, '2023-09-19 14:41:04', '2023-11-06 06:32:04', 1),
 (5, 'Arizona Birkenstock (Black)', 'https://ikonthailand.com/media/catalog/product/4/5/45a6b38945e22f6d8762cce5d7f929bd2b6b74f7cae14aaaf77a70f3b1b41250.jpeg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700', 'Arizona Birkenstock but its BLACK', 'shoes', 6490, 10, '2023-09-19 14:47:03', '2023-10-29 13:59:49', 2),
 (6, 'Fear of God Essentials T-shirt Wheat', 'https://d2cva83hdk3bwc.cloudfront.net/fear-of-god-essentials-t-shirt-wheat-1.jpg', 'Fear of God Essentials T-shirt Wheat', 'shirt', 2090, 10, '2023-09-19 15:25:25', '2023-10-29 13:59:49', 0),
 (7, 'Dr. Martens 1460 Classic 8-Eye Boots', 'https://image.goxip.com/lGgDu1n4dpBeLFAFtkETTiBgoww=/fit-in/500x500/filters:format(jpg):quality(80):fill(white)/https:%2F%2Fs4.thcdn.com%2F%2Fproductimg%2F1600%2F1600%2F12596200-1254778514030327.jpg', 'Dr. Martens 1460 Classic 8-Eye Boots', 'shoes', 3900, 10, '2023-09-21 11:36:29', '2023-10-29 13:59:49', 0),
@@ -176,7 +177,7 @@ INSERT INTO `products` (`productID`, `name`, `image`, `description`, `type`, `pr
 (49, 'Gucci GG Marmont Small Shoulder Bag', 'https://media.gucci.com/style/White_Center_0_0_250x170/1515492904/443497_DTDIT_1000_001_063_0000_Light--GG-Marmont-small-matelass-shoulder-bag.jpg', 'Gucci GG Marmont Small Shoulder Bag', 'other', 7500, 10, '2023-09-21 12:13:23', '2023-10-29 13:59:49', 0),
 (50, 'Prada Saffiano Leather Tote Bag', 'https://www.prada.com/content/dam/pradabkg_products/2/2VG/2VG084/2FADF0002/2VG084_2FAD_F0002_V_DOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg', 'Prada Saffiano Leather Tote Bag', 'other', 6800, 10, '2023-09-21 12:13:23', '2023-10-29 13:59:49', 0),
 (51, 'Fjallraven Kanken Classic Backpack', 'https://www.fjallraven.co.th/cdn/shop/products/Kanken-Classic-52_720x.png?v=1669717650', 'Fjallraven Kanken Classic Backpack', 'other', 1200, 10, '2023-09-21 12:13:23', '2023-09-21 12:13:23', 0),
-(52, 'Coach Signature Mini Backpack', 'https://thailand.coach.com/media/catalog/product/3/0/306ef348b043cb50c14fd0d8f819035725a6e32443759253ecde54a463284351.jpeg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700', 'Coach Signature Mini Backpack', 'other', 2200, 10, '2023-09-21 12:13:23', '2023-10-29 13:59:49', 0),
+(52, 'Coach Signature Mini Backpack', 'https://thailand.coach.com/media/catalog/product/3/0/306ef348b043cb50c14fd0d8f819035725a6e32443759253ecde54a463284351.jpeg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700', 'Coach Signature Mini Backpack', 'other', 2200, 9, '2023-09-21 12:13:23', '2023-10-30 09:50:15', 1),
 (53, 'Michael Kors Jet Set Tote', 'https://michaelkors.scene7.com/is/image/MichaelKors/30F3GIMM2L-0005_IS?$productMain$', 'Michael Kors Jet Set Tote', 'other', 3200, 10, '2023-09-21 12:13:23', '2023-10-29 13:59:49', 0),
 (54, 'Kate Spade New York Crossbody Bag', 'https://images.katespade.com/is/image/KateSpade/KC924_300?$desktopProductTile$', 'Kate Spade New York Crossbody Bag', 'other', 1800, 10, '2023-09-21 12:13:23', '2023-10-29 13:59:49', 0),
 (55, 'The North Face Recon Backpack', 'https://images.thenorthface.com/is/image/TheNorthFace/NF0A52SH_YLM_int?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0', 'The North Face Recon Backpack', 'other', 2800, 10, '2023-09-21 12:13:23', '2023-10-29 13:59:49', 0),
@@ -215,7 +216,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `username`, `email`, `password`, `isAdmin`, `created_at`, `updated_at`, `last_login`, `address`) VALUES
-(1, 'A', 'A@A', '1', 1, '0000-00-00 00:00:00', '2023-10-29 13:55:34', '2023-10-29 13:55:34', NULL),
+(1, 'A', 'A@A', '1', 1, '0000-00-00 00:00:00', '2023-11-05 18:04:41', '2023-11-05 18:04:41', NULL),
 (5, 'Admin', 'Admin@email.kmutnb.ac.th', '1234', 1, '2023-09-19 16:02:28', '2023-09-27 18:11:07', '2023-09-27 18:11:07', NULL),
 (18, 'oak', 'oak@gmail.com', 'Oakoak123', 0, '2023-09-27 17:55:26', '2023-09-27 18:06:34', '2023-09-27 18:06:34', NULL),
 (19, 'pach', 'pach@gmail.com', 'Pachmakub', 0, '2023-09-27 17:55:53', '2023-09-27 18:08:18', '2023-09-27 18:08:18', NULL),
@@ -257,7 +258,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT for table `products`

@@ -178,13 +178,8 @@ router.get("/count", (req, res) => {
 router.get("/search", (req, res) => {
     const searchQuery = req.query.query;
 
-    // Add your database query here to search for products based on the searchQuery
-    // Modify the query to filter products based on the searchQuery parameter
-
-    // For example:
     const q = "SELECT * FROM products WHERE name LIKE ?";
 
-    // Use '%' to perform a partial match on product names
     const searchValue = `%${searchQuery}%`;
 
     db.query(q, [searchValue], (err, data) => {
