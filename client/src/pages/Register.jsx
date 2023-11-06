@@ -67,7 +67,10 @@ const Register = () => {
         <input type="email" id="email" name="email"  placeholder="name@gmail.com" value={formData.email} onChange={handleChange} /><br />
 
         <label htmlFor="password">Password</label><br />
-        <input type="password" id="password" name="password" placeholder="Req One Upper and At least 8 characters" value={formData.password} onChange={handleChange} pattern="^[A-Z].{7,}$"/><br />
+
+        <input type="password" id="password" name="password" 
+        placeholder="Req One Upper and At least 8 characters" value={formData.password} 
+        onChange={handleChange} pattern="^[A-Z].{7,}$"/><br />
 
         <input type="checkbox" id='check' name='check' value="check" onChange={handleCheck}/> <a href='https://web.facebook.com/profile.php?id=100006137019693'>I have read agreement</a>
         <button type="submit">Register</button>
