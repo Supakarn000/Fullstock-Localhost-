@@ -28,19 +28,18 @@ router.use(cookieParser());
 router.post("/", (req, res) => {
     const { username, password } = req.body;
 
-    db.query("SELECT * FROM users WHERE username = ?", [username], (selectErr, selectData) => {
-        if (selectErr) {
-            console.error("Error checking username: " + selectErr);
-            return res.status(500).json({ error: "" });
+    db.query("SELECT * FROM users WHERE username = ?", [username], (err, selectData) => {
+        if (err) {
+            return res.status(500).json(err);
         }
         if (selectData.length === 0) {
-            return res.status(401).json({ error: "Username not found" });
+            return res.status(500).json(err);
         }
         const storedPassword = selectData[0].password;
         const isAdmin = selectData[0].isAdmin;
 
         if (password !== storedPassword) {
-            return res.status(401)
+            return res.status(404).json(err)
         }
         const userId = selectData[0].userID;
 
@@ -52,10 +51,10 @@ router.post("/", (req, res) => {
         console.log('Session userID:', req.session.userID);
         console.log('Session isAdmin:', req.session.isAdmin);
 
-        const updateTimestampQuery = "UPDATE users SET last_login = NOW() WHERE userID = ?";
-        db.query(updateTimestampQuery, [userId], (updateErr) => {
+        const updateTimestamp = "UPDATE users SET last_login = NOW() WHERE userID = ?";
+        db.query(updateTimestamp, [userId], (updateErr) => {
             if (updateErr) {
-                return err
+                return updateErr
             }
 
             return res.status(200).json({ message: "Login successful", userId, isAdmin });

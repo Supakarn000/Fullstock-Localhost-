@@ -25,8 +25,8 @@ router.use(
 router.post('/', async (req, res) => {
     const ses = req.session.userID;
     try {
-        console.log(ses);
-        console.log(req.session);
+        //console.log(ses);
+        //console.log(req.session);
         const { userID, cartItems, totalPrice } = req.body;
 
         const order = {

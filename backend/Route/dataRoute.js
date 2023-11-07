@@ -17,7 +17,9 @@ const router = express.Router();
 router.get("/", (req, res) => {
     const q = "SELECT DISTINCT userID, orderDate FROM orders";
     db.query(q, (err, data) => {
-        if (err)return res.json(err);
+        if (err){
+          return res.json(err);
+        }
         return res.json(data);
     });
 });

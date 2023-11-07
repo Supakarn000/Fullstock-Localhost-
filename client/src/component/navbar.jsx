@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import ReactSession from 'react-client-session';
 import Cookies from 'js-cookie';
 
 const Navbar = () => {
@@ -19,6 +20,7 @@ const Navbar = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("username");
         localStorage.removeItem("cartItems");
+        navigate('/');
         window.location.reload();
     };
 
@@ -77,7 +79,7 @@ const Navbar = () => {
                     <li className="nav-item">
                         <a
                             className="nav-link"
-                            href="https://github.com/Supakarn000/FullStock-MySql-"
+                            href="https://github.com/Supakarn000/Fullstock-Localhost-"
                             onMouseEnter={handleTextMouseEnter}
                             onMouseLeave={handleTextMouseLeave}
                         >

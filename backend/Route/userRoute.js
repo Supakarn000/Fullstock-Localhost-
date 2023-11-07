@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
     if (typeof user === 'object') {
         insertSingleUser(user, res);
     } else {
-        res.status(400)
+        res.status(400).json({error: "error"})
     }
 
     function insertSingleUser(user, res) {
@@ -42,8 +42,7 @@ router.post("/", (req, res) => {
 
         db.query(q, values, (err, data) => {
             if (err) {
-                console.error(err);
-                return err
+                return json(err);
             }
             return res.status(200).json("User created");
         });

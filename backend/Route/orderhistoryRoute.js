@@ -22,9 +22,9 @@ router.get('/', (req, res) => {
     }
     const userID = userId;
 
-    const selectOrdersQuery = 'SELECT * FROM orders WHERE userID = ?';
+    const orderhistory = 'SELECT * FROM orders WHERE userID = ?';
 
-    db.query(selectOrdersQuery, [userID], (err, results) => {
+    db.query(orderhistory, [userID], (err, results) => {
         if (err) {
             res.status(500)
         } else {
